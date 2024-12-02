@@ -1,0 +1,27 @@
+map_path: "/media/liu/PATHF/KAIST_DataSet/urban26/one_lidar_map/map_opti2.pcd"
+imu_topic: /imu/data_raw
+lidar_topic: /ns2/velodyne_points
+
+# Init Param
+init_time_seconds: 5
+imu_hz: 100
+init_position: [20, 10, -8]
+init_euler: [0, 0, 0]
+
+# min_eff_rate: 0.8
+
+# Extrinsic Param
+L2I:
+  extrinsic_T: [-0.403596, -0.373928, 0.24377]
+  extrinsic_R: [-0.514520836148376, 0.701074962894649, -0.493722802361246,
+                -0.492472183213258, -0.712956243253504, -0.499163844811518, 
+                -0.701954028359652, -0.01368545242645, 0.71209075998888]
+
+# NDT Param
+esp: 0.01
+max_iteration: 20
+voxel_size: 1
+
+# for debug
+save_mode: -1      # 0 save all path, 1 save x y for track points
+pose_save_path: "/home/liu/Desktop/slam_ws/src/Localization/eskf_ndt/result/path.txt"

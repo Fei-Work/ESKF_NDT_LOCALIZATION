@@ -1,0 +1,26 @@
+map_path: "/home/liu/data/map/indoor_lab.pcd"
+# map_path: "/home/liu/data/map/indoor_lab_2_filtered.pcd"
+pose_save_path: "/home/liu/Desktop/slam_ws/src/Localization/eskf_ndt/result/path.txt"
+
+imu_topic: /IMU_data
+lidar_topic: /points_raw
+
+init_time_seconds: 5
+imu_hz: 250
+
+
+# Extrinsic Param
+L2I:
+  # extrinsic_T: [0, 0.02, 0.22]
+  # extrinsic_R: [1, 0, 0,
+  #               0, 1, 0, 
+  #               0, 0, 1]
+
+# ndt param
+esp: 0.001
+max_iteration: 20
+voxel_size: 0.2
+
+
+# for debug
+save_mode: -1      # 0 save all path, 1 save x y for track points

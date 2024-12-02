@@ -1,0 +1,9 @@
+<launch>
+
+    <rosparam command="load" file="$(find eskf_ndt)/config/pathf_outdoor.yaml" />
+
+    <node pkg="eskf_ndt" type="map_manager" name="map_manager" output="screen"/>
+    <node pkg="eskf_ndt" type="eskf_ndt_matching" name="eskf_ndt_matching" output="screen" />
+    <!-- <node pkg="eskf_ndt" type="init_pose_publisher" name="init_pose_publisher" output="screen" /> -->
+    <node name="rviz_node" pkg="rviz" type="rviz" args="-d $(find eskf_ndt)/rviz_config/matching.rviz" />
+</launch>

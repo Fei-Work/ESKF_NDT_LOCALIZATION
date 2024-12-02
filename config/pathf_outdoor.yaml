@@ -1,0 +1,34 @@
+# map_path: /home/liu/Desktop/slam_ws/src/ndt_matching/data/campus2.pcd
+map_path: "/home/liu/data/map/bumpy_corridor.pcd"
+# map_path: "/home/liu/data/map/north_campus.pcd"
+imu_topic: /IMU_data
+lidar_topic: /points_raw
+
+# Init Param
+init_time_seconds: 5
+imu_hz: 250
+init_position: [55, 15, 0.5]
+init_euler: [180, 0, 0]
+
+# min_eff_rate: 0.8
+
+# Extrinsic Param
+L2I:
+  extrinsic_T: [0, 0.02, 0.22]
+  extrinsic_R: [0.85914086338888, -0.16812013815960, -0.48333486942347,
+                0.18408974009409,  0.98280060520460, -0.01462661962150, 
+                0.47748083149745, -0.07641066388050,  0.87531335303299]
+  # extrinsic_T: [0, 0.02, 0.22]
+  # extrinsic_R: [1, 0, 0,
+  #               0, 1, 0, 
+  #               0, 0, 1]
+
+
+# NDT Param
+esp: 0.01
+max_iteration: 20
+voxel_size: 1
+
+# for debug
+save_mode: -1      # 0 save all path, 1 save x y for track points
+pose_save_path: "/home/liu/Desktop/slam_ws/src/Localization/eskf_ndt/result/path.txt"
